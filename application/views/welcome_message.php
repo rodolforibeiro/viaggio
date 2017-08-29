@@ -46,7 +46,7 @@
 						</ul>
 					</li>
 					<li><a href="contact.html">Contact</a></li>
-					<li><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>
+					<li><a class="btn" href="index.php/welcome/logar">SIGN IN / SIGN UP</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -57,8 +57,8 @@
 	<header id="head">
 		<div class="container">
 			<div class="row">
-				<h1 class="lead">Planeje, Sonhe, Viaje</h1>
-				<p class="tagline">Viaggio - Sua Viagem em Um Clique</p>
+				<h1 class="lead">Dream, Plan, Go</h1>
+				<p class="tagline">Viaggio - Your trip in a click</p>
 				<p><a class="btn btn-default btn-lg" role="button">MORE INFO</a> </p>
 			</div>
 		</div>
