@@ -32,4 +32,23 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('signup');
 	}
+
+public function cadastrar()
+	{
+		$data['nome'] = $this->input->post('firstname');
+		$data['sobrenome'] = $this->input->post('lastname');
+		$data['email'] = $this->input->post('inputemail');
+		$data['login'] = $this->input->post('username');
+		$data['senha'] = $this->input->post('inputpassword');
+		
+		if($this->db->insert('viajantes',$data)) {
+			$data['msg'] = 'Your user has been registered please signin';	
+		    $this->load->view('signin',$data);
+			} else
+		{
+			redirect('welcome/signup');
+		}
+		
+	}
+
 }

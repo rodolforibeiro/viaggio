@@ -78,7 +78,7 @@
 							<p class="text-center text-muted">Lorem ipsum dolor sit amet, <a href="signin.html">Login</a> adipisicing elit. Quo nulla quibusdam cum doloremque incidunt nemo sunt a tenetur omnis odio. </p>
 							<hr>
 
-							<form>
+							<form class="form-control" style="border: none" action="<?= base_url("index.php/welcome/cadastrar") ?>"  method="post">
 							    <div class="top-margin">
 									<label>Username</label>
 									<input type="text" class="form-control" name="username" id="user" required>
@@ -99,11 +99,11 @@
 								<div class="row top-margin">
 									<div class="col-sm-6">
 										<label>Password <span class="text-danger">*</span></label>
-										<input type="text" class="form-control" name="inputpassword" id="password">
+										<input type="password" class="form-control" name="inputpassword" id="password">
 									</div>
 									<div class="col-sm-6">
 										<label>Confirm Password <span class="text-danger">*</span></label>
-										<input type="text" class="form-control" name="inputconfirmpassword" id="confirmpassword">
+										<input type="password" class="form-control" name="inputconfirmpassword" id="confirmpassword">
 									</div>
 								</div>
 

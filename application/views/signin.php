@@ -63,6 +63,10 @@
 			<li class="active">User access</li>
 		</ol>
 
+		<div class="alert alert-success" role="alert">   		
+   		<?php if (isset($msg)) echo $msg; ?>
+		</div>
+
 		<div class="row">
 			
 			<!-- Article main content -->
