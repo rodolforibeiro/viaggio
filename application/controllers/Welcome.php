@@ -18,6 +18,15 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->library('form_validation');
+		$this->load->helper('form');
+	}
+
+
 	public function index()
 	{
 		$this->load->view('welcome_message');
@@ -30,23 +39,41 @@ class Welcome extends CI_Controller {
 
 	public function registrar()
 	{
-		$this->load->view('signup');
+		
+        $this->load->view('signup');
+		
+		
 	}
 
 public function cadastrar()
 	{
-		$data['nome'] = $this->input->post('firstname');
-		$data['sobrenome'] = $this->input->post('lastname');
-		$data['email'] = $this->input->post('inputemail');
-		$data['login'] = $this->input->post('username');
-		$data['senha'] = $this->input->post('inputpassword');
 		
-		if($this->db->insert('viajantes',$data)) {
-			$data['msg'] = 'Your user has been registered please signin';	
-		    $this->load->view('signin',$data);
-			} else
+		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('firstname', 'First Name', 'required');
+		$this->form_validation->set_rules('lastname', 'Last Name', 'required');
+		$this->form_validation->set_rules('email', 'Email Address','required|valid_email');
+		$this->form_validation->set_rules('password', 'Password', 'required|matches[confirmpassword]');
+		$this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'required');
+		if($this->form_validation->run() == FALSE)
 		{
-			redirect('welcome/signup');
+            $data['formErrors'] = validation_errors();
+            $this->load->view('signup',$data);
+		}else
+		{
+			$data['nome'] = $this->input->post('firstname');
+			$data['sobrenome'] = $this->input->post('lastname');
+			$data['email'] = $this->input->post('email');
+			$data['login'] = $this->input->post('username');
+			$data['senha'] = md5($this->input->post('password'));
+		
+			if($this->db->insert('viajantes',$data)) 
+				{
+					$data['msg'] = 'Your user has been registered please signin';	
+		    		$this->load->view('signin',$data);
+				} else
+				{
+					redirect('welcome/signup');
+				}
 		}
 		
 	}
