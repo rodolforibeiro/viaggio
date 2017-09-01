@@ -24,6 +24,9 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->library('form_validation');
 		$this->load->helper('form');
+		$this->load->model("viajantes_model");// chama o modelo usuarios_model
+
+		 
 	}
 
 
@@ -45,7 +48,59 @@ class Welcome extends CI_Controller {
 		
 	}
 
-public function cadastrar()
+	public function check_database($password){
+    $entrada  = $this->input->post('entrada');
+    $password = $this->input->post('password');
+    $result = $this->viajantes_model->Verificarlogin($entrada, $password);
+    if($result){
+      $sess_array = array();
+      foreach($result as $row){
+        $sess_array = array(
+                       'id'=>$row->id,
+                       'login'=>$row->login
+                      );
+        $this->session->set_userdata('loggedIn',$sess_array);
+
+      }
+
+      return true;
+
+    }else{
+      $this->form_validation->set_message('check_database', 'Invalid Username or Password.');
+      return false;
+    }
+  }
+
+	 public function autenticar(){
+ 
+		$this->form_validation->set_rules('entrada', 'Username Email', 'trim|required');
+    	$this->form_validation->set_rules('password', 'Password', 'trim|required|callback_check_database');
+    if($this->form_validation->run() == FALSE){
+            $data['formErrors'] = validation_errors();
+            $this->load->view('signin',$data);
+    }else{
+     //redirect('homepage', 'refresh');
+     //$this->session->set_userdata('loggedIn');
+     $this->load->view('welcome_message'); 
+    }
+
+
+        //$this->load->model("viajantes_model");// chama o modelo usuarios_model
+        //$email = $this->input->post("entrada");// pega via post o email que venho do formulario
+        //$senha = $this->input->post("senha"); // pega via post a senha que venho do formulario
+        //$usuario = $this->viajantes_model->VerificarLogin($email,$senha); // acessa a função buscaPorEmailSenha do modelo
+ 
+        //if($usuario){
+        //    $this->session->set_userdata("usuario_logado", $usuario);
+        //    $dados = array("mensagem" => "Logado com sucesso!");
+        //}else{
+        //    $dados = array("mensagem" => "Não foi possível fazer o Login!");
+        //}
+ 
+        //$this->load->view("login/autenticar", $dados);
+    }
+
+	public function cadastrar()
 	{
 		
 		$this->form_validation->set_rules('username', 'Username', 'required');

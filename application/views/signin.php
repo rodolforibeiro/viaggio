@@ -67,6 +67,12 @@
    		<?php if (isset($msg)) echo $msg; ?>
 		</div>
 
+		<?php  if (isset($formErrors)) { if($formErrors){?>
+		<div class="alert alert-danger">
+			<?=$formErrors?>
+		</div>
+		<?php } } ?>		
+
 		<div class="row">
 			
 			<!-- Article main content -->
@@ -82,14 +88,14 @@
 							<p class="text-center text-muted">If you have not registered, <a href="registrar">Register</a> now.</p>
 							<hr>
 							
-							<form>
+							<form class="form-control" style="border: none" action="<?= base_url("index.php/welcome/autenticar") ?>"  method="post">>
 								<div class="top-margin">
 									<label>Username/Email <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<input type="text" name="entrada" class="form-control">
 								</div>
 								<div class="top-margin">
 									<label>Password <span class="text-danger">*</span></label>
-									<input type="password" class="form-control">
+									<input type="password" name="password" class="form-control">
 								</div>
 
 								<hr>
