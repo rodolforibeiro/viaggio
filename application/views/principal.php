@@ -47,7 +47,7 @@
 						</ul>
 					</li>
 					<li><a href="contact.html">Contact</a></li>
-					<li><a class="btn" href="index.php/welcome/logar">SIGN IN / SIGN UP</a></li>
+					<!-- <li><a class="btn" href="index.php/welcome/logar">SIGN IN / SIGN UP</a></li> -->
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -55,18 +55,47 @@
 	<!-- /.navbar -->
 
 	<!-- Header -->
-	<header id="head">
-		<div class="container">
+	<header id="headprincipal">
+            <div class="secondary">
+				<div  class="col-md-3 col-sm-6 highlight">
+				    <button style="font-size:24px">My Settings <i class="fa fa-cogs fa-5"></i></button> 
+					<div class="h-body text-center">
+						<br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquid adipisci aspernatur. Soluta quisquam dignissimos earum quasi voluptate. Amet, dignissimos, tenetur vitae dolor quam iusto assumenda hic reprehenderit?</p>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 highlight">
+			    	<button style="font-size:24px">My Trips <i class="fa fa-globe fa-5"></i></button> 
+					<div class="h-body text-center">
+						<br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, commodi, sequi quis ad fugit omnis cumque a libero error nesciunt molestiae repellat quos perferendis numquam quibusdam rerum repellendus laboriosam reprehenderit! </p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 highlight">
+					<button style="font-size:24px">New Routes <i class="fa fa-random fa-5"></i></button> 
+					<div class="h-body text-center">
+						<br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis?</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 highlight">
+					<button style="font-size:24px">Support <i class="fa fa-smile-o fa-5"></i></button> 
+					<div class="h-body text-center">
+						<br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, excepturi, maiores, dolorem quasi reprehenderit illo accusamus nulla minima repudiandae quas ducimus reiciendis odio sequi atque temporibus facere corporis eos expedita? </p>
+					</div>
+				</div>
+			</div> <!-- /row  -->
+
+
+		<!-- <div class="container">
 			<div class="row">
 				<h1 class="lead">Dream, Plan, Go</h1>
 				<p class="tagline">Viaggio - Your trip in a click</p>
 				<p><a class="btn btn-default btn-lg" role="button">MORE INFO</a> </p>
 			</div>
-		</div>
+		</div> --> 
 	</header>
-	<!-- /Header -->
+	<!-- /Header 
 
-	<!-- Intro -->
+	<!-- Intro
 	<div class="container text-center">
 		<br> <br>
 		<h2 class="thin">The best place to tell people why they are here</h2>
@@ -74,14 +103,14 @@
 			The difference between involvement and commitment is like an eggs-and-ham breakfast:<br> 
 			the chicken was involved; the pig was committed.
 		</p>
-	</div>
+	</div>  -->
 	<!-- /Intro-->
 		
-	<!-- Highlights - jumbotron -->
+	<!-- Highlights - jumbotron
 	<div class="jumbotron top-space">
 		<div class="container">
 			
-			<h3 class="text-center thin">Reasons to use this template</h3>
+			<!-- <h3 class="text-center thin">Reasons to use this template</h3> 
 			
 			<div class="row">
 				<div class="col-md-3 col-sm-6 highlight">
@@ -108,10 +137,10 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, excepturi, maiores, dolorem quasi reprehenderit illo accusamus nulla minima repudiandae quas ducimus reiciendis odio sequi atque temporibus facere corporis eos expedita? </p>
 					</div>
 				</div>
-			</div> <!-- /row  -->
+			</div> <!-- /row  
 		
 		</div>
-	</div>
+	</div> -->
 	<!-- /Highlights -->
 
 	<!-- container -->

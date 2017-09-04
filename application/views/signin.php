@@ -63,9 +63,15 @@
 			<li class="active">User access</li>
 		</ol>
 
-		<div class="alert alert-success" role="alert">   		
-   		<?php if (isset($msg)) echo $msg; ?>
+		<!-- <div class="alert alert-success" role="alert">   		
+   		<?php // if (isset($msg)) echo $msg; ?>
+		</div> -->
+
+		<?php  if (isset($msg)) { if($msg){?>
+		<div class="alert alert-success">
+			<?=$msg?>
 		</div>
+		<?php } } ?>	
 
 		<?php  if (isset($formErrors)) { if($formErrors){?>
 		<div class="alert alert-danger">
@@ -83,12 +89,11 @@
 				
 				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 					<div class="panel panel-default">
-						<div class="panel-body">
+						<div class="panel-body"> 
 							<h3 class="thin text-center">Sign in to your account</h3>
 							<p class="text-center text-muted">If you have not registered, <a href="registrar">Register</a> now.</p>
-							<hr>
-							
-							<form class="form-control" style="border: none" action="<?= base_url("index.php/welcome/autenticar") ?>"  method="post">>
+													
+							<form class="form-control" style="border: none" action="<?= base_url("index.php/welcome/autenticar") ?>"  method="post">
 								<div class="top-margin">
 									<label>Username/Email <span class="text-danger">*</span></label>
 									<input type="text" name="entrada" class="form-control">
@@ -109,7 +114,7 @@
 									</div>
 								</div>
 							</form>
-						</div>
+						</div> 
 					</div>
 
 				</div>

@@ -59,7 +59,7 @@ class Welcome extends CI_Controller {
                        'id'=>$row->id,
                        'login'=>$row->login
                       );
-        $this->session->set_userdata('loggedIn',$sess_array);
+        $this->session->set_userdata($sess_array);
 
       }
 
@@ -81,7 +81,9 @@ class Welcome extends CI_Controller {
     }else{
      //redirect('homepage', 'refresh');
      //$this->session->set_userdata('loggedIn');
-     $this->load->view('welcome_message'); 
+     
+     $this->load->view('principal'); 
+
     }
 
 
