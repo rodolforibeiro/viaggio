@@ -57,29 +57,34 @@
 	<!-- Header -->
 	<header id="headprincipal">
             <div class="secondary">
-				<div  class="col-md-3 col-sm-6 highlight">
-				    <button style="font-size:24px">My Settings <i class="fa fa-cogs fa-5"></i></button> 
+				 <div  class="col-md-3 col-sm-6 highlight">
+				   
+				    <div class="h-caption"><h4> <a href="index.html"><i class="fa fa-book fa-5"></i></a>Diary Guide</h4></div>
+				    <!-- <button style="font-size:24px">My Settings <i class="fa fa-cogs fa-5"></i></button>  -->
 					<div class="h-body text-center">
-						<br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquid adipisci aspernatur. Soluta quisquam dignissimos earum quasi voluptate. Amet, dignissimos, tenetur vitae dolor quam iusto assumenda hic reprehenderit?</p>
+						<p>See your daily tour guide</p>
 					</div>
+					</div>
+				</div>  
+				<div class="col-md-3 col-sm-6 highlight">
+				    <div class="h-caption"><h4><a href="index.html"><i class="fa fa-globe fa-5"></i></a>My Trips</h4></div>
+			    	<!-- <button style="font-size:24px">My Trips <i class="fa fa-globe fa-5"></i></button> -->
+					<div class="h-body text-center">
+						<p>Plan your trips</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 highlight">
-			    	<button style="font-size:24px">My Trips <i class="fa fa-globe fa-5"></i></button> 
+					<div class="h-caption"><h4><a href="index.html"><i class="fa fa-random fa-5"></i></a>New Routes</h4></div>
+					<!-- <button style="font-size:24px">New Routes <i class="fa fa-random fa-5"></i></button> -->
 					<div class="h-body text-center">
-						<br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, commodi, sequi quis ad fugit omnis cumque a libero error nesciunt molestiae repellat quos perferendis numquam quibusdam rerum repellendus laboriosam reprehenderit! </p>
+						<p>Create new travels and share with your friends</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 highlight">
-					<button style="font-size:24px">New Routes <i class="fa fa-random fa-5"></i></button> 
+					<div class="h-caption"><h4><a href="index.html"><i class="fa fa-smile-o fa-5"></i></a>Support</h4></div>
+					<!-- <button style="font-size:24px">Support <i class="fa fa-smile-o fa-5"></i></button> -->
 					<div class="h-body text-center">
-						<br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis?</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<button style="font-size:24px">Support <i class="fa fa-smile-o fa-5"></i></button> 
-					<div class="h-body text-center">
-						<br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, excepturi, maiores, dolorem quasi reprehenderit illo accusamus nulla minima repudiandae quas ducimus reiciendis odio sequi atque temporibus facere corporis eos expedita? </p>
+						<p>If you need some help we are here to listen you</p>
 					</div>
 				</div>
 			</div> <!-- /row  -->
