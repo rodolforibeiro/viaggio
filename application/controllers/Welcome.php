@@ -32,7 +32,9 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->view('header');
 		$this->load->view('welcome_message');
+		$this->load->view('footer');
 	}
 
 	public function logar()
@@ -82,7 +84,9 @@ class Welcome extends CI_Controller {
      //redirect('homepage', 'refresh');
      //$this->session->set_userdata('loggedIn');
      
-     $this->load->view('principal'); 
+     $this->load->view('header');
+     $this->load->view('principal');
+     $this->load->view('footer'); 
 
     }
 
